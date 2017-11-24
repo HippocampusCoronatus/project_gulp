@@ -1,5 +1,13 @@
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 module.exports = {
     output: {
-        filename: 'main.js'
-    }
+        filename: 'main.min.js'
+    },
+    devtool: 'source-map',
+    plugins: [
+        new UglifyJsPlugin({
+            sourceMap: true
+        })
+    ],
 };
