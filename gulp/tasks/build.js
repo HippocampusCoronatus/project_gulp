@@ -15,14 +15,14 @@ gulp.task('build', function(callback) {
     );
 });
 
-// config.js.srcのファイルをバンドルし、config.js.destに出力する
+// config.srcのファイルをバンドルし、config.destに出力する
 gulp.task('webpack', function() {
-    return gulp.src([config.js.src])
+    return gulp.src(config.src)
     .pipe(plumber({
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
     .pipe(webpackStream( {
       config: require(config.webpack)
     }))
-    .pipe(gulp.dest(config.js.dest));
+    .pipe(gulp.dest(config.dest));
 });

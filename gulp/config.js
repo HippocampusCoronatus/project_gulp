@@ -4,10 +4,11 @@ const path = {
 };
 
 const build = {
-    js: {
-        src: path.sourceDir + 'js/**', //入力元
-        dest: path.buildDir + 'js/' // 出力先
-    },
+    src: [
+      path.sourceDir + 'js/**',
+      path.sourceDir + 'css/**'
+    ], //入力元
+    dest: path.buildDir, // 出力先
     // buildタスクからの位置関係を指定する
     webpack: '../../webpack.config.js'
 };
@@ -19,7 +20,6 @@ const clean = {
 const copy = {
     target: [
       path.sourceDir + 'html/**',
-      path.sourceDir + 'css/**',
       path.sourceDir + 'images/**'
     ],
     src: path.sourceDir,
