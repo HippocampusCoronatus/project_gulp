@@ -13,7 +13,7 @@ $ npm -v
 5.5.1
 ```
 
-※いずれはnpmを[Yarn](https://yarnpkg.com/ja/)に切り替えたい。
+~~※いずれはnpmを[Yarn](https://yarnpkg.com/ja/)に切り替えたい。~~
 
 nodeとnpmがインストールできたらgulpをグローバルインストールします。
 
@@ -28,6 +28,10 @@ package.jsonと同じディレクトリ階層でコマンド実行してくだ�
 
 ```
 $ npm install
+```
+
+```
+$ yarn install
 ```
 
 gulpがグローバルとローカルにインストールされているのが確認できればOKです。

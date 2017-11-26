@@ -24,7 +24,7 @@ const copy = {
     ],
     src: path.sourceDir,
     dest: path.buildDir
-}
+};
 
 module.exports = {
     build: build,
